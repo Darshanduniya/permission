@@ -1,0 +1,14 @@
+import os
+
+file_path = "/path/to/your/file.txt"  # Specify the path to your file
+
+# Check if file already exists
+if not os.path.exists(file_path):
+    # Create an empty file if it doesn't exist
+    with open(file_path, 'w'):
+        pass
+    print(f"File '{file_path}' created.")
+
+# Set full permissions (read, write, execute) to the file
+os.chmod(file_path, 0o777)
+print(f"Permissions set to '{file_path}'.")
